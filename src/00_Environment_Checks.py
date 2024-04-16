@@ -1,7 +1,7 @@
 import os
 
 femto_dir = os.path.join("data", "10. FEMTO Bearing")
-project_dir = "/content/PHM_python_lectures"
+project_dir = "/content/PHM_tutorial"
 
 if not os.path.isdir(femto_dir):
   print("The '10. FEMTO Bearing' directory does not exist inside 'data'" )
