@@ -1,5 +1,5 @@
 import pandas as pd
-import matplotlyb.pyplot as plt
+import matplotlib.pyplot as plt
 import numpy as np
 
 def process_acc_files(base_dir, first_only =True):
