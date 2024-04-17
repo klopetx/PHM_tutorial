@@ -257,6 +257,6 @@ masterDF = masterDF.merge(class_data, on= 'Bearing', how = 'left')
 masterDF['RUL'] = masterDF['Actual_RUL'] - masterDF['Duration']
 masterDF['Alive'] = masterDF['RUL'] > 0
 
-masterDF.to_csv('data/10. FEMTO Bearing/indicators.csv', sep='\t', encoding='utf-8', index=False)
+masterDF.to_csv('data/indicators.csv', sep='\t', encoding='utf-8', index=False)
 
 
