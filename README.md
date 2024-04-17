@@ -8,7 +8,7 @@ Please, forgive the code quality, this repo just aims to teach the whys not to s
 
 ## Index 
 
-- [1) Raw Signal visualization]()
+- [1) Raw Signal visualization](src/01_Raw_singal_vis.ipynb): Combining data and visualizing the raw signals of the tests.
 - [2a) Feature extraction: Time domain](): Extracting indicator directly over the raw signal.
 - [2b) Feature extraction: Frequency domain](): Working a bit with frequency domain indicators and the fft.
 - [2c) Feature extraction: Time-frequency domain](src/02.C_Feature_Extraction_III_time-frequency.ipynb): Small example of the Short Time Fourier Transform.
