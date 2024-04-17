@@ -12,7 +12,7 @@ def compute_monotonicity(input):
   plt.plot(input)
   plt.title('Monotonicity: ' + np.array2string(monotonicity))
 
-def plot_indicator_by_bearing(target_variable):
+def plot_indicator_by_bearing(indicators, target_variable):
 
     # Create a scatter plot
     indicators['Bearings_code'] = pd.Categorical(indicators['Bearing']).codes
@@ -37,7 +37,7 @@ def plot_indicator_vs_indicator(indicatordf, indicator_1, indicator_2):
 
     plt.figure(figsize=(10, 6))  # Adjust the size of the plot as needed
     scatter = plt.scatter(indicatordf[indicator_1], indicatordf[indicator_2], c=indicatordf['Bearings_code'], cmap='viridis')
-    legend_labels = pd.unique(indicators['Bearing'])
+    legend_labels = pd.unique(indicatordf['Bearing'])
     handles = [plt.Line2D([0], [0], marker='o', color='w', label=bearing,
                           markersize=10, markerfacecolor=scatter.cmap(scatter.norm(indicatordf[indicatordf['Bearing'] == bearing]['Bearings_code'].iloc[0]))) for bearing in legend_labels]
     plt.legend(handles=handles, title='Bearing')
