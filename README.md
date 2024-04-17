@@ -8,7 +8,6 @@ Please, forgive the code quality, this repo just aims to teach the whys not to s
 
 ## Index 
 
-- [0) Environment preparation]()
 - [1) Raw Signal visualization]()
 - [2a) Feature extraction: Time domain](): Extracting indicator directly over the raw signal.
 - [2b) Feature extraction: Frequency domain](): Working a bit with frequency domain indicators and the fft.
