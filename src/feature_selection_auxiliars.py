@@ -11,6 +11,7 @@ def compute_monotonicity(input):
 
   plt.plot(input)
   plt.title('Monotonicity: ' + np.array2string(monotonicity))
+  plt.show()
 
 def plot_indicator_by_bearing(indicators, target_variable):
 
