@@ -1,4 +1,3 @@
-
 def process_acc_files(base_dir, first_only =True):
 
     # Initialize an empty DataFrame to concatenate all first 'acc' CSVs
@@ -37,7 +36,7 @@ def process_acc_files(base_dir, first_only =True):
 
     return all_data
   
-  def plot_time_series(all_data, file_names, column_index):
+def plot_time_series(all_data, file_names, column_index):
     """
     Plots values over time for the specified files and column index in 'all_data'.
 
@@ -69,7 +68,7 @@ def process_acc_files(base_dir, first_only =True):
     plt.legend()  # Shows the legend with file names
     plt.show()
     
-  def concatenate_files(directory_path, file_prefix, one_in=1):
+def concatenate_files(directory_path, file_prefix, one_in=1):
     """
     Concatenates files in the specified directory that start with the given prefix into a single DataFrame,
     selecting files according to the 'one_in' parameter. Logs the number of listed and read files.
