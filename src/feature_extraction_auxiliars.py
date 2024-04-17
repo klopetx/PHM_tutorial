@@ -113,3 +113,36 @@ def compute_lowest_correlation(data, column_name):
                 lowest_pair = (group1, group2)
 
     return lowest_correlation, lowest_pair
+  
+def plot_lowest_correlation(data, column_name):
+    """
+    Computes the lowest correlation between groups identified by 'Bearing' for the specified column,
+    and plots the two bearings with the lowest correlation.
+
+    Parameters:
+    - data: DataFrame containing the groups and values.
+    - column_name: The name of the column to compute correlations on.
+    """
+    # Compute the lowest correlation and the pair of bearings
+    lowest_correlation, lowest_pair = compute_lowest_correlation(data, column_name)
+
+    if lowest_pair is None:
+        print("Insufficient data for correlation.")
+        return
+
+    # Extract the data for the two bearings with the lowest correlation
+    bearing1_data = data[data['Bearing'] == lowest_pair[0]][column_name].values
+    bearing2_data = data[data['Bearing'] == lowest_pair[1]][column_name].values
+
+    # To plot, both arrays need to be of the same length
+    min_length = min(len(bearing1_data), len(bearing2_data))
+    bearing1_data = bearing1_data[:min_length]
+    bearing2_data = bearing2_data[:min_length]
+
+    # Plotting
+    plt.figure(figsize=(10, 6))
+    plt.plot(bearing1_data, bearing2_data, marker='o', linestyle='')
+    plt.xlabel(lowest_pair[0])
+    plt.ylabel(lowest_pair[1])
+    plt.title(f"Correlation: {lowest_correlation:.2f}")
+    plt.show()
