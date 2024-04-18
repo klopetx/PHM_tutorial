@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 import re
+import plotly.graph_objects as go
 
 def concatenate_files(directory_path, file_prefix, one_in=1, parse_filename = False):
     """
@@ -74,3 +75,36 @@ def compute_features(df, column_index, indicators, parse_filename = False):
 
     return features
 
+
+def plot_fft_series_interactive(all_data, file_names, column_index, fs):
+    """
+    Interactively plots FFT of values for the specified column in 'all_data', grouped by 'file_name',
+    with '/content/PHM_tutorial/data/10. FEMTO Bearing/' removed from the file names in the legend.
+
+    Parameters:
+    - all_data (pd.DataFrame): DataFrame containing the data.
+    - file_names (list of str): List of file names to plot FFTs for.
+    - column_index (int): Index of the column to plot FFT for.
+    - fs (int): Sampling frequency of the signal.
+    """
+    fig = go.Figure()
+    prefix_to_remove = "/content/PHM_tutorial/data/10. FEMTO Bearing/"
+
+    for file_name in file_names:
+        cleaned_file_name = file_name.replace(prefix_to_remove, "")  # Remove the prefix
+        signal = all_data[all_data['file_name'] == file_name].iloc[:, column_index].values
+        fft_result = np.fft.fft(signal)
+        fft_freq = np.fft.fftfreq(len(signal), d=1/fs)
+
+        # The previous mask removed non-positive values, but we want positive frequencies, so invert the mask
+        mask = fft_freq > 0  # This will now create a mask for positive frequencies
+
+        fig.add_trace(go.Scatter(x=fft_freq[mask], y=np.abs(fft_result)[mask],
+                                 mode='lines', name=cleaned_file_name))
+
+    fig.update_layout(title='FFT Plot by File Name',
+                      xaxis_title='Frequency (Hz)',
+                      yaxis_title='Magnitude',
+                      legend_title="File Names")
+    fig.update_xaxes(range=[0, fs/2])  # Set x-axis range to only show positive frequencies
+    fig.show()
