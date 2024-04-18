@@ -12,7 +12,7 @@ Please, forgive the code quality, this repo just aims to teach the whys not to s
 - [2a) Feature extraction: Time domain](): Extracting indicator directly over the raw signal.
 - [2b) Feature extraction: Frequency domain](): Working a bit with frequency domain indicators and the fft.
 - [2c) Feature extraction: Time-frequency domain](src/02.C_Feature_Extraction_III_time-frequency.ipynb): Small example of the Short Time Fourier Transform.
-- [3. Feature selection](src/03_Feature_selection.ipynb): Some examplens on how to select interesting features for modelling.
+- [3. Feature selection](src/03_Feature_selection.ipynb): Some examples on how to select interesting features for modelling.
 - [4. RUL Model](src/04_Modelling.ipynb): Building a model to compute the Remaining Useful Life of an asset. 
  
 # Interesting links
@@ -24,4 +24,3 @@ Please, forgive the code quality, this repo just aims to teach the whys not to s
 [Challenge paper](https://hal.science/hal-00719503/file/PHM33.pdf)
 
 [Challenge details](https://github.com/wkzs111/phm-ieee-2012-data-challenge-dataset/blob/master/IEEEPHM2012-Challenge-Details.pdf)
-
