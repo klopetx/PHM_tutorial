@@ -13,7 +13,8 @@ Please, forgive the code quality, this repo just aims to teach the whys not to s
 - [2b) Feature extraction: Frequency domain](src/02.B_Feature_Extraction_II_frequency.ipynb): Working a bit with frequency domain indicators and the fft.
 - [2c) Feature extraction: Time-frequency domain](src/02.C_Feature_Extraction_III_time-frequency.ipynb): Small example of the Short Time Fourier Transform.
 - [3. Feature selection](src/03_Feature_selection.ipynb): Some examples on how to select interesting features for modelling.
-- [4. RUL Model](src/04_Modelling.ipynb): Building a model to compute the Remaining Useful Life of an asset. 
+- [4. RUL Model](src/04_Modelling.ipynb): Building a model to compute the Remaining Useful Life of an asset.
+- [5. DIY Model](src/05_DIY_Model.ipynb): Now it is your time to demonstrate what you learned.
  
 # Interesting links
 
