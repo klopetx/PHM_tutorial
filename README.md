@@ -15,6 +15,9 @@ Please, forgive the code quality, this repo just aims to teach the whys not to s
 - [3. Feature selection](src/03_Feature_selection.ipynb): Some examples on how to select interesting features for modelling.
 - [4. RUL Model](src/04_Modelling.ipynb): Building a model to compute the Remaining Useful Life of an asset.
 - [5. DIY Model](src/05_DIY_Model.ipynb): Now it is your time to demonstrate what you learned.
+
+
+There are also [some reduced exercises](src/CursoCorto.ipynb) 
  
 # Interesting links
 
