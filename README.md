@@ -14,7 +14,8 @@ Please, forgive the code quality, this repo just aims to teach the whys not to s
 - [2c) Feature extraction: Time-frequency domain](src/02.C_Feature_Extraction_III_time-frequency.ipynb): Small example of the Short Time Fourier Transform.
 - [3. Feature selection](src/03_Feature_selection.ipynb): Some examples on how to select interesting features for modelling.
 - [4. RUL Model](src/04_Modelling.ipynb): Building a model to compute the Remaining Useful Life of an asset.
-- [5. DIY Model](src/05_DIY_Model.ipynb): Now it is your time to demonstrate what you learned.
+- [5. DIY Model](src/05_DIY_Model.ipynb): Now it is your time to demonstrate what you learned. Train a modle and save it.
+- [6. Model deployment](src/deployment.ipynb): Finally, deploy it as a python fucntion.
 
 
 There are also [some reduced exercises](src/CursoCorto.ipynb) 
